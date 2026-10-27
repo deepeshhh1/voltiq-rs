@@ -1,0 +1,24 @@
+key
+wait 1000
+key
+wait 1000
+throttle 60
+wait 3000
+status
+throttle 0
+wait 500
+fault temp
+wait 1500
+status
+clear
+wait 500
+key
+wait 800
+key
+wait 800
+plug
+wait 3000
+status
+unplug
+wait 500
+quit
