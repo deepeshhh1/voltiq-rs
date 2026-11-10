@@ -1,4 +1,4 @@
-// VOLTIQ Phase 0 — EV OS core as a laptop simulation.
+// Volt-IQ Phase 0 — EV OS core as a laptop simulation.
 // Wires the services together and reads commands from stdin.
 // No hardware here: sensors, contactor and motor are all SimHal.
 
@@ -48,7 +48,7 @@ fn main() {
     }
     drop(tx); // services hold the other senders now
 
-    println!("VOLTIQ booting... type 'key' to turn on. 'quit' to stop.");
+    println!("Volt-IQ booting... type 'key' to turn on. 'quit' to stop.");
     let stdin = std::io::stdin();
     for line in stdin.lock().lines() {
         let line = match line {
@@ -128,7 +128,7 @@ fn main() {
     s.stop.store(true, std::sync::atomic::Ordering::Relaxed);
     // give the threads a moment to see the flag and exit
     thread::sleep(std::time::Duration::from_millis(600));
-    println!("VOLTIQ stopped. Logs: voltiq-log.csv, events.log, can.log");
+    println!("Volt-IQ stopped. Logs: volt-iq-log.csv, events.log, can.log");
     // threads are daemon-ish; process exits here.
     let _ = std::io::stdout().flush();
 }

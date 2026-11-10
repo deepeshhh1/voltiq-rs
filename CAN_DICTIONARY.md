@@ -1,4 +1,4 @@
-# VOLTIQ CAN Dictionary — bench bus, v1
+# Volt-IQ CAN Dictionary — bench bus, v1
 
 500 kbit/s, standard 11-bit IDs. Simulated bus for Phase 0 —
 frames are built by the services and written to `can.log`.

@@ -1,4 +1,4 @@
-// HAL — the line between VOLTIQ core and hardware.
+// HAL — the line between Volt-IQ core and hardware.
 //
 // Rule: state.rs, can.rs and the supervisor rules never touch this.
 // They only work on plain values passed in. Everything that smells

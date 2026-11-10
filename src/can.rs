@@ -1,4 +1,4 @@
-// CAN frames, VOLTIQ bench bus (500 kbit/s, 11-bit IDs).
+// CAN frames, Volt-IQ bench bus (500 kbit/s, 11-bit IDs).
 // Full table lives in CAN_DICTIONARY.md. Everything here is
 // simulated — no real bus, no hardware.
 

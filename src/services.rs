@@ -208,13 +208,13 @@ pub fn supervisor_thread(s: Arc<Shared>, bus: Sender<Msg>) {
 }
 
 // logger: CAN frames -> can.log, events -> events.log,
-// telemetry snapshot -> voltiq-log.csv every 500 ms.
+// telemetry snapshot -> volt-iq-log.csv every 500 ms.
 pub fn logger_thread(s: Arc<Shared>, rx: Receiver<Msg>) {
     let mut csv = OpenOptions::new()
         .create(true)
         .append(true)
-        .open("voltiq-log.csv")
-        .expect("cannot open voltiq-log.csv");
+        .open("volt-iq-log.csv")
+        .expect("cannot open volt-iq-log.csv");
     let mut can_log = OpenOptions::new()
         .create(true)
         .append(true)
@@ -312,7 +312,7 @@ pub fn dashboard_thread(s: Arc<Shared>) {
         let bar: String = std::iter::repeat('#').take(filled).collect();
         let empty: String = std::iter::repeat('-').take(20 - filled).collect();
         print!("\x1b[2J\x1b[H"); // clear screen, cursor home
-        println!("VOLTIQ 0.1.0 — EV OS sim (SIMULATED signals, no hardware)");
+        println!("Volt-IQ 0.1.0 — EV OS sim (SIMULATED signals, no hardware)");
         println!("============================================================");
         println!("STATE: {:<8}  contactor: {}", st, if cont { "CLOSED" } else { "OPEN" });
         if fault != FaultCode::None {

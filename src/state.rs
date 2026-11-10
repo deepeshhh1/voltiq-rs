@@ -1,5 +1,5 @@
 // Vehicle state machine + supervisor rules.
-// This is the spine of VOLTIQ Phase 0. Everything else (services,
+// This is the spine of Volt-IQ Phase 0. Everything else (services,
 // dashboard, logger) just reads this or asks it to change.
 
 // numbers match the supervisor CAN frame (0x3F0)

@@ -1,6 +1,6 @@
-# VOLTIQ 0.1.0 — EV OS core, Phase 0 (laptop simulation)
+# Volt-IQ 0.1.0 — EV OS core, Phase 0 (laptop simulation)
 
-VOLTIQ is Deepesh's EV operating system plan: one platform that runs
+Volt-IQ is Deepesh's EV operating system plan: one platform that runs
 the battery service (CellSight), motor service (TorqueTwin) and
 charging service (GridSync) together, with a Safety Supervisor that
 can veto anything. Phase 0 is the skeleton that breathes — on a
@@ -19,7 +19,7 @@ laptop, in Rust, with simulated signals. No hardware, no ESP32 yet.
   CAN-silence (>1 s) force FAULT, open the contactor, and log the
   event. Motor spins only in RUN with a healthy pack; charging locks
   the motor out.
-- Logger writes `voltiq-log.csv` (telemetry every 500 ms),
+- Logger writes `volt-iq-log.csv` (telemetry every 500 ms),
   `events.log` (faults/state changes) and `can.log` (bus frames).
 - Terminal dashboard refreshes every 500 ms.
 
@@ -107,7 +107,7 @@ cargo run < demo.txt
 It does: key on → RUN → throttle 60 → inject over-temp → FAULT
 + log entry → clear → key on → plug in → charge → unplug → quit.
 Then check: `events.log` should show the OVER-TEMP fault,
-`voltiq-log.csv` should show the state walk OFF → ACC → RUN →
+`volt-iq-log.csv` should show the state walk OFF → ACC → RUN →
 FAULT → OFF → ACC → RUN → CHARGE → ACC.
 
 ## Honest limitations
